@@ -26,31 +26,8 @@
 	transform: skewX(-10deg);
 }
 
-.pitem svg{
-	width: 230px;
-	height: 150px;
-	stroke-dasharray: 230 8000;
-	stroke-dashoffset: -380px;
-	stroke-width: 5px;
-	fill: transparent;
-	stroke: #ffc107;
-	transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-}
-
-.pitem svg rect{
-	width: 100%;
-	height: 100%;
-}
-
-.pitem svg:hover {
-	stroke-dashoffset: 0;
-	stroke-dasharray: 800;
-	stroke-width: 3px;
-}
-
 .pitem .content{
-	position: relative;
-	top: -60%;
+
 	text-align: center;
 }
 
