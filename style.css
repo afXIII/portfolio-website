@@ -1,3 +1,8 @@
+a, a:hover, a:visited{
+	text-decoration: none;
+}
+
+
 #name {
 	font-family: Lato;
 	font-weight: 300;
@@ -15,20 +20,32 @@
 	left:-50%;
 	width:50%;
 	height: 100%;
-	background: indigo;
-	opacity: 0.1;
+	background: #933469;
+	opacity: 0.3;
+	transition: 1s;
+	pointer-events: none;
+}
+.pitem:after{
+	content: "";
+	position: absolute;
+	top:0;
+	right:-50%;
+	width:50%;
+	height: 100%;
+	background: #933469;
+	opacity: 0.3;
 	transition: 1s;
 	pointer-events: none;
 }
 
 .pitem:hover:before {
 	left: -10%;
-	transform: skewX(-10deg);
+	transform: skewX(-15deg);
 }
 
-.pitem .content{
-
-	text-align: center;
+.pitem:hover:after {
+	right: -10%;
+	transform: skewX(-15deg);
 }
 
 .myshadow{
@@ -37,4 +54,14 @@
 
 h4{
 	font-family: Lato;
+}
+
+.left{
+	background: #f8f4f8;
+}
+
+@media (min-width: 768px){
+	.right{
+		margin-left: 5%;
+	}
 }
