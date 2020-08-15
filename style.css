@@ -10,10 +10,9 @@ a, a:hover, a:visited{
 
 .pitem{
 	height: 150px;
-	overflow: hidden;
 }
 
-.pitem:before{
+.pitem .content:before{
 	content: "";
 	position: absolute;
 	top:0;
@@ -25,7 +24,7 @@ a, a:hover, a:visited{
 	transition: 1s;
 	pointer-events: none;
 }
-.pitem:after{
+.pitem .content:after{
 	content: "";
 	position: absolute;
 	top:0;
@@ -38,14 +37,48 @@ a, a:hover, a:visited{
 	pointer-events: none;
 }
 
-.pitem:hover:before {
+.pitem .content:hover:before {
 	left: -10%;
 	transform: skewX(-15deg);
 }
 
-.pitem:hover:after {
+.pitem .content:hover:after {
 	right: -10%;
 	transform: skewX(-15deg);
+}
+
+.pitem .content{
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.pitem .content span{
+	position: absolute;
+	top: 110%;
+	left:50%;
+	margin-left: -53px;
+	transition: 1s;
+}
+
+.pitem .content:hover span{
+	top:70%;
+}
+
+.test{
+	position: relative;
+}
+
+.date{
+	position: absolute;
+	top:-10%;
+	background: #BD1550;
+	font-style: italic;
+	font-weight: 300;
+	z-index: 100;
+	font-size: 0.8em;
 }
 
 .myshadow{
@@ -58,6 +91,7 @@ h4{
 
 .left{
 	background: #f8f4f8;
+	text-align: center;
 }
 
 @media (min-width: 768px){
