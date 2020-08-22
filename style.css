@@ -12,6 +12,56 @@ a, a:hover, a:visited{
 	height: 150px;
 }
 
+.container{
+	height: 100vh !important;
+}
+
+
+body:before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: -10%;
+	width: 80%;
+	height: 100%;
+	background: #BD1550;
+	opacity: 0.7;
+	transform: skewX(45deg);
+	animation: bodyAnimation 50s infinite alternate linear;
+	z-index: -1;
+}
+body:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: -10%;
+	width: 80%;
+	height: 100%;
+	background: #f8ca00;
+	opacity: 0.7;
+	transform: skewX(45deg);
+	animation: bodyAnimation2 60s infinite alternate linear;
+	z-index: -2;
+}
+
+@keyframes bodyAnimation{
+	from{
+		left: -50%;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes bodyAnimation2{
+	from{
+		left: 100%;
+	}
+	to {
+		left: -50%;
+	}
+}
+
 .pitem .content:before{
 	content: "";
 	position: absolute;
@@ -97,5 +147,8 @@ h4{
 @media (min-width: 768px){
 	.right{
 		margin-left: 5%;
+	}
+	html,body {
+		overflow: hidden;
 	}
 }
