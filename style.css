@@ -12,8 +12,14 @@ a, a:hover, a:visited{
 	height: 150px;
 }
 
+html,body {
+	overflow: hidden !important;
+}
+
+
 .container{
 	height: 100vh !important;
+	overflow: scroll;
 }
 
 
@@ -140,15 +146,16 @@ h4{
 }
 
 .left{
-	background: #f8f4f8;
+	background: rgba(248, 244, 248, 0.95);
 	text-align: center;
+}
+
+.right{
+	background: rgba(248, 249, 250, 0.95)
 }
 
 @media (min-width: 768px){
 	.right{
 		margin-left: 5%;
-	}
-	html,body {
-		overflow: hidden;
 	}
 }
