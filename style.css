@@ -115,7 +115,7 @@ body:after{
 	position: absolute;
 	top: 110%;
 	left:50%;
-	margin-left: -53px;
+	transform: translate(-50%, 0);
 	transition: 1s;
 }
 
